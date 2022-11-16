@@ -1,4 +1,4 @@
-name: build
+name: MkDocs Build
 
 on:
   push:
@@ -13,8 +13,13 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18      
       - name: Install requirements
-        run: pip install -r requirements.txt
+        run: |
+          npm install uglifycss -g
+          pip install -r requirements.txt
       - name: Build and deploy
         working-directory: .
         run: mkdocs gh-deploy --force --clean --verbose
