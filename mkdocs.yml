@@ -1,6 +1,9 @@
 site_name: C# para Cobolistas
 site_author: Guionardo Furlan
+repo_url: "https://github.com/guioanrdo/ambevtech-csharp"
 copyright: Guionardo Furlan @ 2022
+site_url: https://guionardo.github.io/ambevtech-csharp/
+
 theme:
   name: null
   custom_dir: 'cinder'
@@ -9,20 +12,20 @@ theme:
     - bash
     - csharp
 
-extra_javascript:
-  - js/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+# extra_javascript:
+#   - js/mathjax.js
+#   - https://polyfill.io/v3/polyfill.min.js?features=es6
+#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
   - mermaid2
   - search:
-  - minify:
-      minify_html: true
-      minify_js: true
-      minify_css: true
-      htmlmin_opts:
-        remove_comments: true
+  # - minify:
+  #     minify_html: true
+  #     minify_js: true
+  #     minify_css: true
+  #     htmlmin_opts:
+  #       remove_comments: true
       # js_files:
       #   - assets/js/main.js
       # css_files:
@@ -39,7 +42,8 @@ plugins:
   #     input_extensions: "" # comma separated list of extensions to parse, by default every file is parsed
 
 
-# markdown_extensions:
+markdown_extensions:
+    - admonition
 #   - pymdownx.tasklist # Lista de tarefas
 #   - pymdownx.emoji # Emojis
 #   - pymdownx.mark
@@ -56,5 +60,9 @@ plugins:
 #           class: arithmatex
 
 nav:
-  - Home: index.md
-  - Objetivo: 02.objetivo.md
+  - Home:
+    - Index: index.md
+    - Objetivo: 00.preaula/objetivos.md
+    - Setup: 00.preaula/setup.md
+  - Aula 1:
+    - Introdução: 01/dotnet.md

@@ -16,7 +16,7 @@
             <!-- Main title -->
 
             {% if not config.theme.disable_nav_site_name %}
-              <a class="navbar-brand" href="{{ nav.homepage.url|url }}"><img src="/img/ambev-tech.svg" height="28px" /> {{ config.site_name }}</a>
+              <a class="navbar-brand" href="{{ nav.homepage.url|url }}"><img src="/ambevtech-csharp/img/ambev-tech.svg" height="28px" /> {{ config.site_name }}</a>
             {% endif %}
         </div>
 
@@ -77,13 +77,13 @@
                     <li>
                         <a href="{{ page.edit_url }}">
                             {%- if config.repo_name == 'GitHub' -%}
-                            <i class="fab fa-github"></i> Edit on {{ config.repo_name }}
+                            <i class="fab fa-github"></i>
                             {%- elif config.repo_name == 'Bitbucket' -%}
-                            <i class="fab fa-bitbucket"></i> Edit on {{ config.repo_name }}
+                            <i class="fab fa-bitbucket"></i> 
                             {%- elif config.repo_name == 'GitLab' -%}
-                            <i class="fab fa-gitlab"></i> Edit on {{ config.repo_name }}
+                            <i class="fab fa-gitlab"></i> 
                             {%- else -%}
-                            Edit on {{ config.repo_name }}
+                            
                             {%- endif -%}
                         </a>
                     </li>
