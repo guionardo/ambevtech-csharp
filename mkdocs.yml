@@ -1,0 +1,60 @@
+site_name: C# para Cobolistas
+site_author: Guionardo Furlan
+copyright: Guionardo Furlan @ 2022
+theme:
+  name: null
+  custom_dir: 'cinder'
+  hljs_languages:
+    - python
+    - bash
+    - csharp
+
+extra_javascript:
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - mermaid2
+  - search:
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      # js_files:
+      #   - assets/js/main.js
+      # css_files:
+      #   - assets/css/style.css
+  - build_plantuml:
+      render: "server" # or "local" for local rendering
+      bin_path: "/usr/local/bin/plantuml" # ignored when render: server
+      server: "http://www.plantuml.com/plantuml" # offical plantuml server
+      disable_ssl_certificate_validation: true # for self-signed and invalid certs
+      output_format: "svg" # or "png"
+      diagram_root: "docs/diagrams" # should reside under docs_dir
+      output_folder: "out"
+      input_folder: "src"
+      input_extensions: "" # comma separated list of extensions to parse, by default every file is parsed
+
+
+markdown_extensions:
+  - pymdownx.tasklist # Lista de tarefas
+  - pymdownx.emoji # Emojis
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        # - name: mermaid
+        #   class: mermaid
+        #   format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: arithmatex
+          class: arithmatex
+
+nav:
+  - Home: index.md
+  - Objetivo: 02.objetivo.md
