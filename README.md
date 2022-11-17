@@ -12,3 +12,4 @@
 * [MD Plugin Admonition](https://python-markdown.github.io/extensions/admonition/)
 * [MD Template cinder](https://sourcefoundry.org/cinder/specimen/)
 * [MkDocs](https://www.mkdocs.org/)
+* [PyMDown-Extensions](https://facelessuser.github.io/pymdown-extensions/extensions)

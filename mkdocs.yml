@@ -44,7 +44,9 @@ plugins:
 
 markdown_extensions:
     - admonition
-#   - pymdownx.tasklist # Lista de tarefas
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.details    
 #   - pymdownx.emoji # Emojis
 #   - pymdownx.mark
 #   - pymdownx.tilde
@@ -62,7 +64,7 @@ markdown_extensions:
 nav:
   - Home:
     - Index: index.md
-    - Objetivo: 00.preaula/objetivos.md
-    - Setup: 00.preaula/setup.md
+    - Objetivo: 00/objetivos.md
+    - Setup: 00/setup.md
   - Aula 1:
     - Introdução: 01/dotnet.md
