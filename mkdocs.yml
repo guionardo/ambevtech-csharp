@@ -41,6 +41,10 @@ plugins:
   #     input_folder: "src"
   #     input_extensions: "" # comma separated list of extensions to parse, by default every file is parsed
 
+extra:
+  analytics:
+    provider: google
+    property: G-JZJW9JGE2E
 
 markdown_extensions:
     - admonition
