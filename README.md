@@ -7,3 +7,8 @@
 
 * [NodeJS](https:nodejs.org)
 * [uglifycss](https://www.npmjs.com/package/uglifycss)
+* [MermaidJS](https://mermaid-js.github.io)
+* [Padrões AmbevTech](https://www.mundotech.com.br/conteudos/templates-padroes-ambevtech/)
+* [MD Plugin Admonition](https://python-markdown.github.io/extensions/admonition/)
+* [MD Template cinder](https://sourcefoundry.org/cinder/specimen/)
+* [MkDocs](https://www.mkdocs.org/)
