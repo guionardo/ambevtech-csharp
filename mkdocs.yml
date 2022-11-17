@@ -44,6 +44,7 @@ plugins:
 
 markdown_extensions:
     - admonition
+    - abbr
     - pymdownx.tasklist:
         custom_checkbox: true
     - pymdownx.details    
@@ -68,3 +69,4 @@ nav:
     - Setup: 00/setup.md
   - Aula 1:
     - Introdução: 01/dotnet.md
+    - Solutions: 01/solution.md

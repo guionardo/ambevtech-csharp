@@ -31,7 +31,7 @@ Disponibilizei este [script](setup.sh) para facilitar a tarefa de configuração
 Basta executar o comando abaixo no console *bash* do seu Ubuntu/WSL2 e acompanhar a execução:
 
 ```bash
-sudo bash <(curl https://guionardo.github.io/ambevtech-csharp/00/setup/setup.sh)
+curl https://raw.githubusercontent.com/guionardo/ambevtech-csharp/main/docs/00/setup.sh | sudo bash
 ```
 ??? note "SCRIPT"
 
