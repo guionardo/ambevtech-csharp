@@ -24,16 +24,6 @@ Direcionar essas pessoas para equipes que desenvolvam em c#, para que possam dar
 ​2. Construir um Worker na pratica com toda a galera​
 3. Dúvidas poderão ser tiradas via chat
 
-## Estrutura Básica​
+## Roadmap
 
-- Testes unitários​
-- Service bus​
-- Rabbit mq​
-- Mongodb​
-- Postgresql​
-- API para leitura e escrita CRUD​
-- Dapper​
-- Entity framework​
-- Performance (async vs sync)​
-- Health check
-- Testes de integração
+![estrutura](../diagrams/out/00.objetivos.roadmap.svg)

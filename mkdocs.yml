@@ -1,6 +1,6 @@
 site_name: C# para Cobolistas
 site_author: Guionardo Furlan
-repo_url: "https://github.com/guioanrdo/ambevtech-csharp"
+repo_url: "https://github.com/guionardo/ambevtech-csharp"
 copyright: Guionardo Furlan @ 2022
 site_url: https://guionardo.github.io/ambevtech-csharp/
 
@@ -8,9 +8,8 @@ theme:
   name: null
   custom_dir: 'cinder'
   hljs_languages:
-    - python
     - bash
-    - csharp
+    - csharp    
 
 # extra_javascript:
 #   - js/mathjax.js
@@ -30,27 +29,22 @@ plugins:
       #   - assets/js/main.js
       # css_files:
       #   - assets/css/style.css
-  # - build_plantuml:
-  #     render: "server" # or "local" for local rendering
-  #     bin_path: "/usr/local/bin/plantuml" # ignored when render: server
-  #     server: "http://www.plantuml.com/plantuml" # offical plantuml server
-  #     disable_ssl_certificate_validation: true # for self-signed and invalid certs
-  #     output_format: "svg" # or "png"
-  #     diagram_root: "docs/diagrams" # should reside under docs_dir
-  #     output_folder: "out"
-  #     input_folder: "src"
-  #     input_extensions: "" # comma separated list of extensions to parse, by default every file is parsed
-
-extra:
-  analytics:
-    provider: google
-    property: G-JZJW9JGE2E
+  - build_plantuml:
+      render: "server" # or "local" for local rendering
+      bin_path: "/usr/local/bin/plantuml" # ignored when render: server
+      server: "http://www.plantuml.com/plantuml" # offical plantuml server
+      disable_ssl_certificate_validation: true # for self-signed and invalid certs
+      output_format: "svg" # or "png"
+      diagram_root: "docs/diagrams" # should reside under docs_dir
+      output_folder: "out"
+      input_folder: "src"
+      input_extensions: "" # comma separated list of extensions to parse, by default every file is parsed
 
 markdown_extensions:
+    - pymdownx.tasklist:        
+        custom_checkbox: true
     - admonition
     - abbr
-    - pymdownx.tasklist:
-        custom_checkbox: true
     - pymdownx.details    
 #   - pymdownx.emoji # Emojis
 #   - pymdownx.mark
