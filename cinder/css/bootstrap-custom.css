@@ -2948,6 +2948,10 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none;
 }
+
+.navbar-brand > img {
+    height: 24px
+}
 @media(min-width:768px) {
     .navbar>.container .navbar-brand {
     margin-left: -15px;

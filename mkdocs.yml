@@ -45,6 +45,7 @@ markdown_extensions:
         custom_checkbox: true
     - admonition
     - abbr
+    - def_list
     - pymdownx.details    
 #   - pymdownx.emoji # Emojis
 #   - pymdownx.mark
@@ -68,3 +69,5 @@ nav:
   - Aula 1:
     - Introdução: 01/dotnet.md
     - Solutions: 01/solution.md
+    - Bases 1: 01/bases_01.md
+    - Bases 2: 01/bases_02.md
