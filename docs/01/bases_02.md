@@ -74,17 +74,3 @@ Evite definir uma struct caso o tipo não tenha todas essas características:
     * É imutável.
     * Não precisa ser [_unboxed_](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing) frequentemente.
 
-
-## Métodos
-
-## Escopo
-
-## Herança
-
-## Namespaces
-
-## Generics
-
-## Interfaces
-
-## Records
