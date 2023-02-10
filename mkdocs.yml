@@ -1,7 +1,7 @@
 site_name: C# para Cobolistas
 site_author: Guionardo Furlan
 repo_url: "https://github.com/guionardo/ambevtech-csharp"
-copyright: Guionardo Furlan @ 2022
+copyright: Guionardo Furlan @ 2023
 site_url: https://guionardo.github.io/ambevtech-csharp/
 
 theme:
@@ -75,3 +75,5 @@ nav:
   - Aula 2:
     - Bases 3: 02/bases_03.md
     - Bases 4: 02/bases_04.md
+  - Aula 3:
+    - Inter 1: 03/03_01_di.md
