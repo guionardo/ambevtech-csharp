@@ -384,6 +384,14 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "sourcery"
+version = "1.0.5"
+description = "Magically refactor Python"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "urllib3"
 version = "1.26.12"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
@@ -410,7 +418,7 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "1c5f47ad94a9c50d47023ca4b561e03ea119125482fc121e4915f03234b8a367"
+content-hash = "0a5163310f718d70875204bff744bf9236b9bbf42848d422641e701dd685b944"
 
 [metadata.files]
 beautifulsoup4 = [
@@ -620,6 +628,11 @@ six = [
 soupsieve = [
     {file = "soupsieve-2.3.2.post1-py3-none-any.whl", hash = "sha256:3b2503d3c7084a42b1ebd08116e5f81aadfaea95863628c80a3b774a11b7c759"},
     {file = "soupsieve-2.3.2.post1.tar.gz", hash = "sha256:fc53893b3da2c33de295667a0e19f078c14bf86544af307354de5fcf12a3f30d"},
+]
+sourcery = [
+    {file = "sourcery-1.0.5-py2.py3-none-macosx_10_9_universal2.whl", hash = "sha256:b2216c346b88e8c6d256e7478d1e6acf91987511c498a12f5e59470457c45796"},
+    {file = "sourcery-1.0.5-py2.py3-none-manylinux1_x86_64.whl", hash = "sha256:d081bb90ecad068b1be7f46958d868f5329a96a619dda06fc6ffb50279fcf2ca"},
+    {file = "sourcery-1.0.5-py2.py3-none-win_amd64.whl", hash = "sha256:e914e0ab95213630684b0d3310efb5cbc37fecaf5a61eb190fb83acf4980bbf3"},
 ]
 urllib3 = [
     {file = "urllib3-1.26.12-py2.py3-none-any.whl", hash = "sha256:b930dd878d5a8afb066a637fbb35144fe7901e3b209d1cd4f524bd0e9deee997"},

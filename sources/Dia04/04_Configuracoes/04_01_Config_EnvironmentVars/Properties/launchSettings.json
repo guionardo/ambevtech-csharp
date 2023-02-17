@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "04_01_Config_EnvironmentVars": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "AMBIENTE_": "Desenvolvimento",
+        "DB_CONNECTION_STRING": "mongodb://",
+        "MAX_CONNECTED_USERS": "11"
+      }
+    }
+  }
+}
