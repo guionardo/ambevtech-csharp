@@ -78,6 +78,7 @@ nav:
       - Bases 4: 02/bases_04.md
     - Aula 3:
       - Inter 1: 03/03_01_di.md
+      - Stack/Heap: 03/03_02_stack_vs_heap.md
     - Aula 4: 
       - Inter 2 - Configurações: 04/04_01_configuracoes.md
       - Inter 3 - Classes de configuração: 04/04_02_classe.md
