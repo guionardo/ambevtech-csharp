@@ -1,4 +1,4 @@
-@startuml "stack vs heap"
+@startuml
 
 map Stack {
     2 => ref(obj)
