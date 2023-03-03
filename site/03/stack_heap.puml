@@ -1,0 +1,13 @@
+@startuml "stack vs heap"
+
+map Stack {
+    2 => ref(obj)
+    1 => b (20)
+    0 => a (10)
+}
+map Heap {
+obj=> Classe { Data }
+}
+
+Stack::2 --> Heap::obj
+@enduml
