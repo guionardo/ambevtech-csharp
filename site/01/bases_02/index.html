@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Guionardo Furlan">
+    <link rel="canonical" href="https://guionardo.github.io/ambevtech-csharp/01/bases_02/">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>Bases 2 - C# para Cobolistas</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../.."><img src="/ambevtech-csharp/img/ambev-tech.svg" /> C# para Cobolistas</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../..">Index</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../00/objetivos/">Objetivo</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../00/setup/">Setup</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../00/sources/">Fontes</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aulas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Aula 1</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../dotnet/">Introdução</a>
+</li>
+
+        
+            
+<li >
+    <a href="../solution/">Solutions</a>
+</li>
+
+        
+            
+<li >
+    <a href="../bases_01/">Bases 1</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Bases 2</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Aula 2</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../02/bases_03/">Bases 3</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../02/bases_04/">Bases 4</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Aula 3</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../03/03_01_di/">Inter 1</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../03/03_02_stack_vs_heap/">Stack/Heap</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Aula 4</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../04/04_01_configuracoes/">Inter 2 - Configurações</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../04/04_02_classe/">Inter 3 - Classes de configuração</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Busca
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../bases_01/">
+                            <i class="fas fa-arrow-left"></i> Anterior
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../02/bases_03/">
+                            Próximo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/guionardo/ambevtech-csharp/edit/master/docs/01/bases_02.md"><i class="fab fa-github"></i></a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#bases-da-linguagem">Bases da linguagem</a></li>
+            <li class="second-level"><a href="#tipos-de-referencia-reference-types">Tipos de Referência (Reference Types)</a></li>
+                
+                <li class="third-level"><a href="#strings">Strings</a></li>
+            <li class="second-level"><a href="#encapsulamento">Encapsulamento</a></li>
+                
+            <li class="second-level"><a href="#acessibiidade">Acessibiidade</a></li>
+                
+            <li class="second-level"><a href="#classes">Classes</a></li>
+                
+            <li class="second-level"><a href="#escolhendo-entre-class-e-struct">Escolhendo entre class e struct</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="bases-da-linguagem">Bases da linguagem</h1>
+<h2 id="tipos-de-referencia-reference-types">Tipos de Referência (<a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types">Reference Types</a>)</h2>
+<p>Os tipos de referência são <em>ponteiros</em> para os dados, e ao contrário dos <em>value types</em>, durante a atribuição, passagem por parâmetro ou retorno de função, somente o endereço do dado é transmitido.</p>
+<h3 id="strings"><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types#the-string-type">Strings</a></h3>
+<p>Tipo que representa uma sequência de zero ou mais caracteres Unicode.</p>
+<div class="admonition warning">
+<p class="admonition-title">Atenção</p>
+</div>
+<p>Strings são imutáveis. Após a criação de um string, seu conteúdo não pode ser alterado.
+Isso significa que a concatenação de strings a uma mesma variável pode ser bastante custosa em termos de consumo de memória e deve ser levada em consideração durante a construção dos programas.</p>
+<h2 id="encapsulamento"><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/#encapsulation">Encapsulamento</a></h2>
+<p>Este é o primeiro pilar ou princípio da Programação Orientada a Objeto. Agregamos informações dentro de um contexto que façam sentido no seu conjunto. Neste contexto, a agregação une valores e comportamentos, e para isso precisamos definir os membros de um tipo que está sendo definido:</p>
+<dl>
+<dt>Fields</dt>
+<dd>Variáveis declaradas no escopo do objeto.</dd>
+<dt>Constants</dt>
+<dd>Informações imutáveis, definidas em tempo de compilação.</dd>
+<dt>Properties</dt>
+<dd>Métodos de leitura (<em>get</em>) e escrita (<em>set</em>) dos valores do tipo, propiciando um tratamento e validação das informações dos <em>fields</em>, além de promover proteção aos valores armazenados.</dd>
+<dt>Methods</dt>
+<dd>Ações/funções sobre os valores do tipo.</dd>
+<dt>Constructors</dt>
+<dd>Métodos especiais, utilizados para criar a instância do tipo e inicializar seus valores.</dd>
+<dt>Events</dt>
+<dd>Métodos especiais, referências para métodos de outras classes, utilizados para notificação de ocorrências.</dd>
+<dt>Finalizers</dt>
+<dd>Métodos especiais, que são chamados quando o objeto está sendo destruído e é necessária alguma liberação de recursos de forma manual. Raramente utilizados.</dd>
+<dt>Operators</dt>
+<dd>Métodos para sobrecarregar operadores (<a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading"><em>operator overloading</em></a>), modificando operações aritméticas, lógicas e comparativas.</dd>
+<dt>Tipos Aninhados</dt>
+<dd>Tipos que são utilizados apenas dentro do contexto do objeto.</dd>
+</dl>
+<h2 id="acessibiidade">Acessibiidade</h2>
+<p>Os membros dos objetos precisam de uma definição de acesso, para que se garanta a integridade dos valores. Dessa maneira, temos os seguintes modificadores:</p>
+<dl>
+<dt>public</dt>
+<dd>Acessível por qualquer código que consuma o objeto</dd>
+<dt>protected</dt>
+<dd>Acessível apenas pelos objetos cujos tipos herdem do tipo atual</dd>
+<dt>internal</dt>
+<dd>Acessível apenas pelos códigos que pertençam ao mesmo <em>namespace</em> do tipo.</dd>
+<dt>private</dt>
+<dd>Acessível apenas por código do próprio tipo.</dd>
+</dl>
+<h2 id="classes">Classes</h2>
+<h2 id="escolhendo-entre-class-e-struct"><a href="https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct">Escolhendo entre <em>class</em> e <em>struct</em></a></h2>
+<div class="admonition info">
+<p class="admonition-title">Quando usar structs?</p>
+</div>
+<p>Considere usar uma struct ao invés de uma classe se as instâncias do tipo forem pequenas e de vida curta, ou forem comumente embutidas em outros objetos</p>
+<div class="admonition warning">
+<p class="admonition-title">Quando não usar structs?</p>
+</div>
+<p>Evite definir uma struct caso o tipo não tenha todas essas características:</p>
+<pre><code>* Representa logicamente um valor simples, similar aos tipos primitivos.
+* Tem um tamanho de instância de até 16 bytes.
+* É imutável.
+* Não precisa ser [_unboxed_](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing) frequentemente.
+</code></pre></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Guionardo Furlan @ 2023</small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bash.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/csharp.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div
+  class="modal"
+  id="mkdocs_search_modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="searchModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title" id="searchModalLabel">Busca</h4>
+      </div>
+      <div class="modal-body">
+        <p>Digite seus termos de busca</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Busque..."
+              id="mkdocs-search-query"
+            />
+          </div>
+        </form>
+        <div id="mkdocs-search-results"></div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

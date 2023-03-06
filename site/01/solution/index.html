@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Guionardo Furlan" name="author"/>
+<link href="https://guionardo.github.io/ambevtech-csharp/01/solution/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Solutions - C# para Cobolistas</title>
+<link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css" rel="stylesheet"/>
+<link href="//rsms.me/inter/inter.css" rel="stylesheet" type="text/css"/>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css"/>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet"/>
+<link href="../../css/base.min.css" rel="stylesheet"/>
+<link href="../../css/cinder.min.css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<!-- Collapsed navigation -->
+<div class="navbar-header">
+<!-- Expander button -->
+<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<!-- Main title -->
+<a class="navbar-brand" href="../.."><img src="/ambevtech-csharp/img/ambev-tech.svg"/> C# para Cobolistas</a>
+</div>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Home <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../..">Index</a>
+</li>
+<li>
+<a href="../../00/objetivos/">Objetivo</a>
+</li>
+<li>
+<a href="../../00/setup/">Setup</a>
+</li>
+<li>
+<a href="../../00/sources/">Fontes</a>
+</li>
+</ul>
+</li>
+<li class="dropdown active">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Aulas <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a href="" tabindex="-1">Aula 1</a>
+<ul class="dropdown-menu">
+<li>
+<a href="../dotnet/">Introdução</a>
+</li>
+<li class="active">
+<a href="./">Solutions</a>
+</li>
+<li>
+<a href="../bases_01/">Bases 1</a>
+</li>
+<li>
+<a href="../bases_02/">Bases 2</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a href="" tabindex="-1">Aula 2</a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../02/bases_03/">Bases 3</a>
+</li>
+<li>
+<a href="../../02/bases_04/">Bases 4</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a href="" tabindex="-1">Aula 3</a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../03/03_01_di/">Inter 1</a>
+</li>
+<li>
+<a href="../../03/03_02_stack_vs_heap/">Stack/Heap</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a href="" tabindex="-1">Aula 4</a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../04/04_01_configuracoes/">Inter 2 - Configurações</a>
+</li>
+<li>
+<a href="../../04/04_02_classe/">Inter 3 - Classes de configuração</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a data-target="#mkdocs_search_modal" data-toggle="modal" href="#">
+<i class="fas fa-search"></i> Busca
+                        </a>
+</li>
+<li>
+<a href="../dotnet/" rel="prev">
+<i class="fas fa-arrow-left"></i> Anterior
+                        </a>
+</li>
+<li>
+<a href="../bases_01/" rel="next">
+                            Próximo <i class="fas fa-arrow-right"></i>
+</a>
+</li>
+<li>
+<a href="https://github.com/guionardo/ambevtech-csharp/edit/master/docs/01/solution.md"><i class="fab fa-github"></i></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+<ul class="nav bs-sidenav">
+<li class="first-level active"><a href="#solutions">Solutions</a></li>
+<li class="first-level"><a href="#projects">Projects</a></li>
+<li class="first-level"><a href="#criando-nossa-primeira-solution">Criando nossa primeira solution</a></li>
+</ul>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="solutions">Solutions</h1>
+<p>As aplicações dotnet são organizadas de forma componentizada.</p>
+<p>Uma <em>solution</em> contém uma coleção de projetos, junto com as informações de dependência entre estes. </p>
+<p>Os projetos, por sua vez, estão em subpastas com seus arquivos-fonte. Uma solution pode ter um ou mais projetos, e inclusive um projeto pode ser compartilhado por mais de uma solution, mas isso não é comum no nosso contexto.</p>
+<div class="mermaid">classDiagram
+    Solution &lt;|-- ClassLib
+    Solution &lt;|-- AspNet API
+    Solution &lt;|-- Worker
+    Solution : NossaAplicação.sln    
+    class ClassLib {
+        Biblioteca.csproj
+    }
+    class AspNet API {
+        API.csproj
+    }
+    class Worker{
+        Worker.csproj
+    }
+</div>
+<h1 id="projects">Projects</h1>
+<p>Os projetos tem duas funções principais: ser um contêiner para os arquivos-fontes e compilar estes arquivos em algum tipo de componente, definido pelo tipo do projeto. Os tipos de projeto disponíveis no nosso SDK podem ser verificados com o comando abaixo:</p>
+<pre><code class="language-text">❯ dotnet new --list
+These templates matched your input:
+
+Template Name                                 Short Name      Language    Tags
+--------------------------------------------  --------------  ----------  --------------------------
+ASP.NET Core Empty                            web             [C#],F#     Web/Empty
+ASP.NET Core gRPC Service                     grpc            [C#]        Web/gRPC
+ASP.NET Core Web API                          webapi          [C#],F#     Web/WebAPI
+ASP.NET Core Web App                          webapp,razor    [C#]        Web/MVC/Razor Pages
+ASP.NET Core Web App (Model-View-Controller)  mvc             [C#],F#     Web/MVC
+ASP.NET Core with Angular                     angular         [C#]        Web/MVC/SPA
+ASP.NET Core with React.js                    react           [C#]        Web/MVC/SPA
+Blazor Server App                             blazorserver    [C#]        Web/Blazor
+Blazor WebAssembly App                        blazorwasm      [C#]        Web/Blazor/WebAssembly/PWA
+Class Library                                 classlib        [C#],F#,VB  Common/Library
+Console App                                   console         [C#],F#,VB  Common/Console
+dotnet gitignore file                         gitignore                   Config
+Dotnet local tool manifest file               tool-manifest               Config
+EditorConfig file                             editorconfig                Config
+global.json file                              globaljson                  Config
+MSTest Test Project                           mstest          [C#],F#,VB  Test/MSTest
+MVC ViewImports                               viewimports     [C#]        Web/ASP.NET
+MVC ViewStart                                 viewstart       [C#]        Web/ASP.NET
+NuGet Config                                  nugetconfig                 Config
+NUnit 3 Test Item                             nunit-test      [C#],F#,VB  Test/NUnit
+NUnit 3 Test Project                          nunit           [C#],F#,VB  Test/NUnit
+Protocol Buffer File                          proto                       Web/gRPC
+Razor Class Library                           razorclasslib   [C#]        Web/Razor/Library
+Razor Component                               razorcomponent  [C#]        Web/ASP.NET
+Razor Page                                    page            [C#]        Web/ASP.NET
+Solution File                                 sln,solution                Solution
+Web Config                                    webconfig                   Config
+Worker Service                                worker          [C#],F#     Common/Worker/Web
+xUnit Test Project                            xunit           [C#],F#,VB  Test/xUnit
+</code></pre>
+<h1 id="criando-nossa-primeira-solution">Criando nossa primeira solution</h1>
+<p>Observando os templates disponíveis na lista anterior, <em>Solution File</em> usa as chaves <em>sln</em> e <em>solution</em>. Dessa maneira, vamos usar o terminal para criar nossa solution.</p>
+<pre><code class="language-bash">❯ dotnet new sln -n NossaPrimeiraSolution
+The template "Solution File" was created successfully.
+
+❯ dotnet new console --name "ConsoleApp"
+The template "Console App" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on /mnt/c/dev/tmp/dotnet/ConsoleApp/ConsoleApp.csproj...
+  Determining projects to restore...
+  Restored /mnt/c/dev/tmp/dotnet/ConsoleApp/ConsoleApp.csproj (in 119 ms).
+Restore succeeded.
+
+❯ tree
+.
+├── ConsoleApp
+│   ├── ConsoleApp.csproj
+│   └── Program.cs
+└── NossaPrimeiraSolution.sln
+
+1 directory, 3 files
+</code></pre>
+<p>Utilizando o Visual Studio, basta criar um projeto que a solution vai ser criada ao mesmo tempo.</p>
+<p><img alt="vs-create-solution" src="../vs_novo_projeto.png"/>
+<img alt="vs-create-project" src="../vs_novo_projeto_console_1.png"/>
+<img alt="vs-create-console" src="../vs_novo_projeto_console_2.png"/>
+<img alt="vs-create-console-type" src="../vs_novo_projeto_console_3.png"/>
+<img alt="vs-create-console" src="../vs_novo_projeto_console_4.png"/></p>
+<p>Testando o nosso primeiro app de console:</p>
+<pre><code class="language-bash">console/NossaAplicacaoConsole/NossaAplicacaoConsole via .NET v6.0.403 🎯 net6.0
+❯ dotnet run .
+Olá, mundo AmbevTech!
+</code></pre></div>
+</div>
+<footer class="col-md-12 text-center">
+<hr/>
+<p>
+<small>Guionardo Furlan @ 2023</small><br/>
+<small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+</p>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../../js/bootstrap-3.0.3.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bash.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/csharp.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>var base_url = "../.."</script>
+<script src="../../js/base.js"></script>
+<script src="../../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Fechar</span>
+</button>
+<h4 class="modal-title" id="searchModalLabel">Busca</h4>
+</div>
+<div class="modal-body">
+<p>Digite seus termos de busca</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Busque..." type="text"/>
+</div>
+</form>
+<div id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer"></div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
+</html>

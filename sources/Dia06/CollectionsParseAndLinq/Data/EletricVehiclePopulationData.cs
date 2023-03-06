@@ -4,14 +4,14 @@
 /// Dados de população de veículos elétricos
 /// Disponível em https://catalog.data.gov/dataset/electric-vehicle-population-data
 /// </summary>
-public sealed record EletricVehiclePopulationData
+public record EletricVehiclePopulationData
 {
     public const string URL = @"https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD";
 
     /// <summary>
     /// VIN (1-10) : 5YJ3E1EA8J
     /// </summary>
-    public string Vin;
+    public string Vin { get; set; }
 
     /// <summary>
     /// County : San Diego
@@ -92,4 +92,9 @@ public sealed record EletricVehiclePopulationData
     /// 2020 Census Tract : 53061051937
     /// </summary>
     public string CensusTract2020;
+
+    public override string ToString()
+    {
+        return $"{Make} {Model} {ModelYear} {Vin} {County}";
+    }
 }
