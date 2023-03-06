@@ -11,6 +11,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHostedService<WorkerA>();
 builder.Services.AddHostedService<WorkerB>();
+builder.Services.AddHostedService<WorkerC>();
 
 var app = builder.Build();
 
