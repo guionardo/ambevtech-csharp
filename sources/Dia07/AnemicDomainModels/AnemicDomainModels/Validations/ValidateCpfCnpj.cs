@@ -2,6 +2,11 @@ namespace AnemicDomainModels.Validations;
 
 public static class ValidateCpfCnpj
 {
+    private static bool IsAllCharEqual(string doc)
+    {
+        return doc.Select(c => c == doc[0]).Count() == doc.Length;
+    }
+
     public static bool IsValidCpf(string cpf)
     {
         var formattedAccount = cpf.PadLeft(11, '0');
@@ -10,7 +15,7 @@ public static class ValidateCpfCnpj
         var multiplicador2 = new[] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 
         formattedAccount = formattedAccount.Trim().Replace(".", "").Replace("-", "");
-        if (formattedAccount.Length != 11)
+        if (formattedAccount.Length != 11 || IsAllCharEqual(formattedAccount))
             return false;
 
         for (var j = 0; j < 10; j++)
@@ -54,7 +59,7 @@ public static class ValidateCpfCnpj
         var multiplicador2 = new[] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
 
         formattedAccount = formattedAccount.Trim().Replace(".", "").Replace("-", "").Replace("/", "");
-        if (formattedAccount.Length != 14)
+        if (formattedAccount.Length != 14 || IsAllCharEqual(formattedAccount))
             return false;
 
         var tempCnpj = formattedAccount[..12];
