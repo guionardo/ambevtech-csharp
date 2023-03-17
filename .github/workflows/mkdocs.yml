@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - ./docs
-      - ./mkdocs.yml
-      - ./pyproject.toml
-      - ./requirements.txt
+    # paths:
+    #   - ./docs
+    #   - ./mkdocs.yml
+    #   - ./pyproject.toml
+    #   - ./requirements.txt
 
 jobs:
   deploy:
