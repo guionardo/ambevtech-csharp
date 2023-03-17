@@ -6,10 +6,10 @@ site_url: https://guionardo.github.io/ambevtech-csharp/
 
 theme:
   name: null
-  custom_dir: 'cinder'
+  custom_dir: "cinder"
   hljs_languages:
     - bash
-    - csharp    
+    - csharp
 
 # extra_javascript:
 #   - js/mathjax.js
@@ -25,10 +25,10 @@ plugins:
   #     minify_css: true
   #     htmlmin_opts:
   #       remove_comments: true
-      # js_files:
-      #   - assets/js/main.js
-      # css_files:
-      #   - assets/css/style.css
+  # js_files:
+  #   - assets/js/main.js
+  # css_files:
+  #   - assets/css/style.css
   - build_plantuml:
       render: "server" # or "local" for local rendering
       bin_path: "/usr/local/bin/plantuml" # ignored when render: server
@@ -41,44 +41,46 @@ plugins:
       input_extensions: "" # comma separated list of extensions to parse, by default every file is parsed
 
 markdown_extensions:
-    - pymdownx.tasklist:        
-        custom_checkbox: true
-    - admonition
-    - abbr
-    - def_list
-    - pymdownx.details    
-#   - pymdownx.emoji # Emojis
-#   - pymdownx.mark
-#   - pymdownx.tilde
-#   - pymdownx.highlight
-#   - pymdownx.arithmatex:
-#       generic: true
-#   - pymdownx.superfences:
-#       custom_fences:
-#         # - name: mermaid
-#         #   class: mermaid
-#         #   format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - abbr
+  - def_list
+  - pymdownx.details
+  #   - pymdownx.emoji # Emojis
+  #   - pymdownx.mark
+  #   - pymdownx.tilde
+  #   - pymdownx.highlight
+  #   - pymdownx.arithmatex:
+  #       generic: true
+  # - pymdownx.superfences:
+  #   custom_fences:
+  #     - name: mermaid
+  #       class: mermaid
+        # format: !!python/name:pymdownx.superfences.fence_div_format
 #         - name: arithmatex
 #           class: arithmatex
 
 nav:
   - Home:
-    - Index: index.md
-    - Objetivo: 00/objetivos.md
-    - Setup: 00/setup.md
-    - Fontes: 00/sources.md
+      - Index: index.md
+      - Objetivo: 00/objetivos.md
+      - Setup: 00/setup.md
+      - Fontes: 00/sources.md
   - Aulas:
-    - Aula 1:
-      - Introdução: 01/dotnet.md
-      - Solutions: 01/solution.md
-      - Bases 1: 01/bases_01.md
-      - Bases 2: 01/bases_02.md
-    - Aula 2:
-      - Bases 3: 02/bases_03.md
-      - Bases 4: 02/bases_04.md
-    - Aula 3:
-      - Inter 1: 03/03_01_di.md
-      - Stack/Heap: 03/03_02_stack_vs_heap.md
-    - Aula 4: 
-      - Inter 2 - Configurações: 04/04_01_configuracoes.md
-      - Inter 3 - Classes de configuração: 04/04_02_classe.md
+      - Aula 1:
+          - Introdução: 01/dotnet.md
+          - Solutions: 01/solution.md
+          - Bases 1: 01/bases_01.md
+          - Bases 2: 01/bases_02.md
+      - Aula 2:
+          - Bases 3: 02/bases_03.md
+          - Bases 4: 02/bases_04.md
+      - Aula 3:
+          - Inter 1: 03/03_01_di.md
+          - Stack/Heap: 03/03_02_stack_vs_heap.md
+      - Aula 4:
+          - Inter 2 - Configurações: 04/04_01_configuracoes.md
+          - Inter 3 - Classes de configuração: 04/04_02_classe.md
+      - Aula 8:
+          - Projeto: 08/00.projeto.md
