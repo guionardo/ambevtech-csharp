@@ -6,10 +6,12 @@ name: .NET
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - ./sources/Dia08/Eleicoes
   pull_request:
     branches: [ "main" ]
-  #  paths:
-  #    - ./sources/Dia08/Eleicoes
+    paths:
+      - ./sources/Dia08/Eleicoes
 
 jobs:
   build:
