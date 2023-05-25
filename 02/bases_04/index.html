@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Guionardo Furlan" name="author"/>
+<link href="https://guionardo.github.io/ambevtech-csharp/02/bases_04/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Bases 4 - C# para Cobolistas</title>
+<link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css" rel="stylesheet"/>
+<link href="//rsms.me/inter/inter.css" rel="stylesheet" type="text/css"/>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css"/>
+<link href="../../css/bootstrap-custom.min.css" rel="stylesheet"/>
+<link href="../../css/base.min.css" rel="stylesheet"/>
+<link href="../../css/cinder.min.css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<!-- Collapsed navigation -->
+<div class="navbar-header">
+<!-- Expander button -->
+<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<!-- Main title -->
+<a class="navbar-brand" href="../.."><img src="/ambevtech-csharp/img/ambev-tech.svg"/> C# para Cobolistas</a>
+</div>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Home <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="../..">Index</a>
+</li>
+<li>
+<a href="../../00/objetivos/">Objetivo</a>
+</li>
+<li>
+<a href="../../00/setup/">Setup</a>
+</li>
+<li>
+<a href="../../00/sources/">Fontes</a>
+</li>
+<li>
+<a href="../../00/links/">Links</a>
+</li>
+</ul>
+</li>
+<li class="dropdown active">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Aulas <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a href="" tabindex="-1">Aula 1</a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../01/dotnet/">Introdução</a>
+</li>
+<li>
+<a href="../../01/solution/">Solutions</a>
+</li>
+<li>
+<a href="../../01/bases_01/">Bases 1</a>
+</li>
+<li>
+<a href="../../01/bases_02/">Bases 2</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a href="" tabindex="-1">Aula 2</a>
+<ul class="dropdown-menu">
+<li>
+<a href="../bases_03/">Bases 3</a>
+</li>
+<li class="active">
+<a href="./">Bases 4</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a href="" tabindex="-1">Aula 3</a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../03/03_01_di/">Inter 1</a>
+</li>
+<li>
+<a href="../../03/03_02_stack_vs_heap/">Stack/Heap</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a href="" tabindex="-1">Aula 4</a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../04/04_01_configuracoes/">Inter 2 - Configurações</a>
+</li>
+<li>
+<a href="../../04/04_02_classe/">Inter 3 - Classes de configuração</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a href="" tabindex="-1">Aula 8</a>
+<ul class="dropdown-menu">
+<li>
+<a href="../../08/00.projeto/">Projeto</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a data-target="#mkdocs_search_modal" data-toggle="modal" href="#">
+<i class="fas fa-search"></i> Busca
+                        </a>
+</li>
+<li>
+<a href="../bases_03/" rel="prev">
+<i class="fas fa-arrow-left"></i> Anterior
+                        </a>
+</li>
+<li>
+<a href="../../03/03_01_di/" rel="next">
+                            Próximo <i class="fas fa-arrow-right"></i>
+</a>
+</li>
+<li>
+<a href="https://github.com/guionardo/ambevtech-csharp/edit/master/docs/02/bases_04.md"><i class="fab fa-github"></i></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+<ul class="nav bs-sidenav">
+<li class="first-level active"><a href="#bases-da-linguagem">Bases da linguagem</a></li>
+<li class="second-level"><a href="#heranca">Herança</a></li>
+</ul>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="bases-da-linguagem">Bases da linguagem</h1>
+<h2 id="heranca">Herança</h2>
+<p>Herança é um dos pilares da POO (Programação Orientada a Objeto). Na definição de classes, podemos reutilizar propriedades e métodos genéricos e especializar comportamentos de acordo com as necessidades.</p>
+<p>Ainda com relação à orientação a objeto, é sempre importante lembrar do acrônimo SOLID, nesse caso o S que significa Single Responsability Principle.</p>
+<p>Este princípio diz que uma classe deve fazer uma coisa só, e fazer bem. Em outras palavras, uma classe deve ter apenas uma razão para mudar. Classes genéricas que fazem de tudo, estão violando este princípio e produzindo código grande, mais difícil de manter e de testar.</p>
+<p>Um exemplo prático é uma operação de cadastro de usuário, onde teríamos o seguinte fluxo:</p>
+<div class="mermaid">flowchart TD
+    A[Início] --&gt; B[Usuário informa seus dados]
+    B --&gt; C[Validação]
+    C --&gt; D{Dados\nválidos?}
+    D --&gt;|Sim| E[Persistência]
+    D --&gt;|Não| Z[Erro]
+    E --&gt; F{Dados gravados\nem disco?}
+    F --&gt;|Sim| G[Notificação]
+    F --&gt;|Não| Z
+    G --&gt; H{Enviou email\nao administrador?}
+    H --&gt;|Sim| Y[SUCESSO]
+    H --&gt;|Não| Z
+</div>
+<p>Uma classe genérica poderia ser assim</p>
+<pre><code class="language-csharp">  public class UserAccounterBadApproach
+    {
+        private string _name;
+        private string _email;
+
+        public UserAccounterBadApproach(string name, string email)
+        {
+            _name = name;
+            _email = email;
+        }
+
+        public void Validate()
+        {
+            if (string.IsNullOrEmpty(_name))
+                throw new ArgumentNullException("name");
+            if (string.IsNullOrEmpty(_email))
+                throw new ArgumentNullException("email");
+        }
+
+        public void Persist()
+        {
+            // CODE FOR SAVING THE USER DATA INTO FILE
+            File.WriteAllText("user.txt", $"{_name}_{_email}");
+            // Will throw exception if cannot write
+        }
+
+        public void NotifyAdmin()
+        {
+            // CODE FOR SENDING EMAIL TO ADMIN
+            Console.WriteLine($"Hey, admin. New user is comming {_name}");
+        }
+
+
+        public void ReceiveUser()
+        {
+            Validate();
+            Persist();
+            NotifyAdmin();
+        }
+    }
+</code></pre>
+<p>Uma classe melhor definida teria suas funções segregadas em classes especialistas, com o uso de interfaces evitando o acoplamento direto:</p>
+<pre><code class="language-csharp">    public class UsserAccounterBestApproach
+    {
+        private User _user;
+        private IUserValidator _validator;
+        private IUserRepository _repository;
+        private INotifier _notifier;
+
+        public UsserAccounterBestApproach(User user, IUserValidator userValidator, IUserRepository userRepository, INotifier notifier)
+        {
+            _user = user;
+            _validator = userValidator;
+            _repository = userRepository;
+            _notifier = notifier;
+
+        }
+
+        public void ReceiveUser()
+        {
+            _validator.Validate(_user);
+            _repository.Save(_user);
+            _notifier.Notify($"Hey, admin. New user is comming {_user}");
+        }
+    }
+</code></pre></div>
+</div>
+<footer class="col-md-12 text-center">
+<hr/>
+<p>
+<small>Guionardo Furlan @ 2023</small><br/>
+<small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+</p>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../../js/bootstrap-3.0.3.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bash.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/csharp.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>var base_url = "../.."</script>
+<script src="../../js/base.js"></script>
+<script src="../../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Fechar</span>
+</button>
+<h4 class="modal-title" id="searchModalLabel">Busca</h4>
+</div>
+<div class="modal-body">
+<p>Digite seus termos de busca</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Busque..." type="text"/>
+</div>
+</form>
+<div id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer"></div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
+</html>

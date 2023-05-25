@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="Guionardo Furlan">
+    <link rel="canonical" href="https://guionardo.github.io/ambevtech-csharp/03/03_01_di/">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>Inter 1 - C# para Cobolistas</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../.."><img src="/ambevtech-csharp/img/ambev-tech.svg" /> C# para Cobolistas</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../..">Index</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../00/objetivos/">Objetivo</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../00/setup/">Setup</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../00/sources/">Fontes</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../00/links/">Links</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aulas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Aula 1</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../01/dotnet/">Introdução</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../01/solution/">Solutions</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../01/bases_01/">Bases 1</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../01/bases_02/">Bases 2</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Aula 2</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../02/bases_03/">Bases 3</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../02/bases_04/">Bases 4</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Aula 3</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">Inter 1</a>
+</li>
+
+        
+            
+<li >
+    <a href="../03_02_stack_vs_heap/">Stack/Heap</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Aula 4</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../04/04_01_configuracoes/">Inter 2 - Configurações</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../04/04_02_classe/">Inter 3 - Classes de configuração</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Aula 8</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../08/00.projeto/">Projeto</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Busca
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../02/bases_04/">
+                            <i class="fas fa-arrow-left"></i> Anterior
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../03_02_stack_vs_heap/">
+                            Próximo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/guionardo/ambevtech-csharp/edit/master/docs/03/03_01_di.md"><i class="fab fa-github"></i></a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#injecao-de-dependencia">Injeção de Dependência</a></li>
+            <li class="second-level"><a href="#principios-solid">Princípios S.O.L.I.D</a></li>
+                
+                <li class="third-level"><a href="#single-responsability-principle">Single Responsability Principle</a></li>
+                <li class="third-level"><a href="#openclosed-principle">Open/Closed Principle</a></li>
+                <li class="third-level"><a href="#liskov-substituion-principle">Liskov Substituion Principle</a></li>
+                <li class="third-level"><a href="#interface-segregation-principle">Interface Segregation Principle</a></li>
+                <li class="third-level"><a href="#dependency-inversion-principle">Dependency Inversion Principle</a></li>
+            <li class="second-level"><a href="#acoplamento-e-coesao">Acoplamento e Coesão</a></li>
+                
+                <li class="third-level"><a href="#acoplamento">Acoplamento</a></li>
+                <li class="third-level"><a href="#coesao">Coesão</a></li>
+            <li class="second-level"><a href="#heranca-vs-composicao">Herança vs Composição</a></li>
+                
+                <li class="third-level"><a href="#heranca">Herança</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="injecao-de-dependencia">Injeção de Dependência</h1>
+<h2 id="principios-solid">Princípios S.O.L.I.D</h2>
+<p>Dentro dos princípios <a href="https://medium.com/beelabacademy/princ%C3%ADpios-de-s-o-l-i-d-em-c-guia-pr%C3%A1tico-cbb1e6584284">S.O.L.I.D.</a> temos os seguintes itens:</p>
+<ul>
+<li><strong>S</strong>ingle Responsability Principle (Princípio da Responsabilidade Única)</li>
+<li><strong>O</strong>pen/Closed Principle (Princípio do Aberto/Fechado)</li>
+<li><strong>L</strong>iskov Substitution Principle (Princípio da Substituição de Liskov)</li>
+<li><strong>I</strong>nterface Segregation Principle (Princípio da Segregação de Interfaces)</li>
+<li><strong>D</strong>ependency Inversion Principle (Princípio da Inversão de Dependência)</li>
+</ul>
+<h3 id="single-responsability-principle">Single Responsability Principle</h3>
+<blockquote>
+<p>A class should have one, and only one, reason to change.</p>
+<p>Robert C. Martin</p>
+</blockquote>
+<p>Esse primeiro princípio diz que “uma classe deve ter apenas um motivo para mudar”, ou seja, deve ter uma única responsabilidade.</p>
+<p>Basicamente, esse princípio trata especificamente a coesão. A coesão é definida como a afinidade funcional dos elementos de um módulo. Se refere ao relacionamento que os membros desse módulo possuem, se possuem uma relação mais direta e importante. Dessa forma, quanto mais bem definido o que sua classe faz, mais coesa ela é.</p>
+<h3 id="openclosed-principle">Open/Closed Principle</h3>
+<blockquote>
+<p>You should be able to extend a classes behavior, without modifying it.</p>
+<p>Robert C. Martin</p>
+</blockquote>
+<p>No princípio do Open-Closed Principle diz que “as entidades de software (classes, módulos, funções etc.) devem ser abertas para ampliação, mas fechadas para modificação”.</p>
+<p>De forma mais detalhada, diz que podemos estender o comportamento de uma classe, quando for necessário, por meio de herança, interface e composição, mas não podemos permitir a abertura dessa classe para fazer pequenas modificações.</p>
+<h3 id="liskov-substituion-principle">Liskov Substituion Principle</h3>
+<blockquote>
+<p>Derived classes must be substitutable for their base classes.</p>
+<p>Robert C. Martin</p>
+</blockquote>
+<p>Se S é um subtipo de T, então os objetos do tipo T, em um programa, podem ser substituídos pelos objetos de tipo S sem que seja necessário alterar as propriedades deste programa.</p>
+<h3 id="interface-segregation-principle">Interface Segregation Principle</h3>
+<blockquote>
+<p>Make fine grained interfaces that are client specific.</p>
+<p>Robert C. Martin</p>
+</blockquote>
+<p>No princípio da Segregação de Interfaces (ISP) diz que “muitas interfaces específicas são melhores do que uma interface geral” que se trata da coesão em interfaces, da construção de módulos enxutos, ou seja, com poucos comportamentos.</p>
+<p>Interfaces que possuem muitos comportamentos são difíceis de manter e evoluir, e devem ser evitadas.</p>
+<h3 id="dependency-inversion-principle">Dependency Inversion Principle</h3>
+<blockquote>
+<p>Depend on abstractions, not on concretions.</p>
+<p>Robert C. Martin</p>
+</blockquote>
+<p>Devemos “depender de abstrações e não de classes concretas”:</p>
+<ul>
+<li>“Módulos de alto nível não devem depender de módulos de baixo nível.”</li>
+<li>“As abstrações não devem depender de detalhes. Os detalhes devem depender das abstrações.”</li>
+</ul>
+<h2 id="acoplamento-e-coesao">Acoplamento e Coesão</h2>
+<h3 id="acoplamento">Acoplamento</h3>
+<p>Acoplamento é o grau de interdependência entre módulos de software.</p>
+<p>Um auto grau de acoplamento implica que mudanças em um módulo podem refletir em outro módulo acoplado.</p>
+<p>Quanto maior o acoplamento, menor a interdependência, a coordenação e mais turbulento é o fluxo das informações.</p>
+<p>Baixo acoplamento, geralmente indica um sistema bem estruturado e mais fácil de desenvolver, evoluir e dar manutenção.</p>
+<h3 id="coesao">Coesão</h3>
+<p>É um princípio ligado ao <strong>S</strong> do SOLID, e reforçando a idéia, indica que uma classe tem apenas uma responsabilidade e deve fazê-la bem. Não deve assumir responsabilidades que não são suas.</p>
+<p>Quanto mais coesa uma classe é, mais independente ela é.</p>
+<h2 id="heranca-vs-composicao">Herança vs Composição</h2>
+<h3 id="heranca">Herança</h3>
+<p>Quando se estuda <abbr title="Programação Orientada a Objeto">OOP</abbr>, a herança faz parte do roteiro, porque é um dos pilares principais.</p>
+<p>Entretanto, a herança também traz um efeito colateral, aumentando o acoplamento e dificultando testes, e aumentando complexidades.</p>
+<p>Normalmente, é preferível trabalhar com composição, onde uma classe que tem ações que podem ser especializadas, o façam usando outras classes independentes que são injetadas automaticamente.</p>
+<p>Assim, mantemos as classes o mais enxutas possível.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Guionardo Furlan @ 2023</small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/bash.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/csharp.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div
+  class="modal"
+  id="mkdocs_search_modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="searchModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Fechar</span>
+        </button>
+        <h4 class="modal-title" id="searchModalLabel">Busca</h4>
+      </div>
+      <div class="modal-body">
+        <p>Digite seus termos de busca</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Busque..."
+              id="mkdocs-search-query"
+            />
+          </div>
+        </form>
+        <div id="mkdocs-search-results"></div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

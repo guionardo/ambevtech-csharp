@@ -1,0 +1,50 @@
+@startmindmap
+<style>
+mindmapDiagram {
+    :depth(1) {
+      BackGroundColor lightGreen
+    }
+    :depth(2) {
+        BackGroundColor LightBlue
+    }
+}
+</style>
+* Roadmap
+** Setup
+*** Visual Studio
+*** WSL2
+*** Docker
+** Bases da linguagem
+*** Tipos primitivos
+*** Strings
+*** Records
+*** Classes
+*** Métodos
+*** Escopo
+*** Herança
+*** Namespaces
+*** Generics
+*** Interfaces
+** Técnicas
+*** Testes Unitários
+*** Programação assíncrona
+*** Health Check
+*** Testes de Integração
+** Recursos externos
+*** Message Broker
+**** Azure Service Bus
+**** RabbitMQ
+*** Banco de Dados
+**** MongoDB
+**** PostgreSQL
+**** ORM
+***** Dapper
+***** Entity Framework
+** Tipos de Aplicação
+*** API Web
+*** API gRPC
+*** Worker
+** Desenvolvimento de um Worker
+@endmindmap
+
+
