@@ -67,6 +67,7 @@ nav:
       - Objetivo: 00/objetivos.md
       - Setup: 00/setup.md
       - Fontes: 00/sources.md
+      - Links: 00/links.md
   - Aulas:
       - Aula 1:
           - Introdução: 01/dotnet.md
