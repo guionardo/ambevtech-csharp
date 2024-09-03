@@ -1,6 +1,6 @@
 mkdocs==1.4.2
 mkdocs-minify-plugin==0.6.1
-mkdocs-material==8.5.10
+mkdocs-material==9.5.32
 pymdown-extensions==9.8
 mkdocs-build-plantuml-plugin==1.7.4
 mkdocs-mermaid2-plugin==0.6.0
